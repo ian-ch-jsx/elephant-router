@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #020202;
+  color: #fefefe;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header h1:hover {
+  color: red;
+}

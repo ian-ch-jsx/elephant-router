@@ -12,7 +12,6 @@ export default function Compendium() {
     const fetchData = async () => {
       const data = await getPokemon();
       setPokemon(data.results);
-      console.log(data.results);
       timer = setTimeout(() => {
         setLoading(false);
       }, 500);
