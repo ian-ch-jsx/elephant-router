@@ -1,17 +1,12 @@
 import React from 'react';
 
-export default function AnimalDetail({ animals }) {
+export default function pokemonDetail({ pokemonDetails }) {
   return (
-    <div className="animal-list">
-      {animals.map((animal) => (
-        <span className="animal-card" key={animal.id}>
-          <h3>{animal.name}</h3>
-          <h4>{animal.latin_name}</h4>
-          <img src={animal.image_link} />
-          <p>Found in {animal.geo_range}</p>
-          <p>Habitat: {animal.habitat}</p>
-          <p>Diet: {animal.diet}.</p>
-          <p>Lifespan: {animal.lifespan} years.</p>
+    <div className="pokemon-list">
+      {pokemonDetails.map((poke) => (
+        <span className="pokemon-card" key={poke._id}>
+          <h3>{poke.pokemon}</h3>
+          <img src={poke.url_image} />
         </span>
       ))}
     </div>
