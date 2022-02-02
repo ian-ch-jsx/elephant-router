@@ -1,17 +1,18 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import PokemonList from '../../components/PokemonList/PokemonList';
-import { getPokemon } from '../../services/data';
+import VillagerList from '../../components/VillagerList/VillagerList';
+import { getVillagers } from '../../services/data';
 
 export default function Compendium() {
   const [loading, setLoading] = useState(true);
-  const [pokemon, setPokemon] = useState([]);
+  const [villagers, setVillagers] = useState([]);
 
   useEffect(() => {
     let timer;
     const fetchData = async () => {
-      const data = await getPokemon();
-      setPokemon(data.results);
+      const data = await getVillagers();
+      console.log(data);
+      setVillagers(data);
       timer = setTimeout(() => {
         setLoading(false);
       }, 400);
@@ -31,7 +32,12 @@ export default function Compendium() {
     );
   return (
     <>
-      <PokemonList pokemon={pokemon} setPokemon={setPokemon} />
+      <VillagerList
+        villagers={villagers}
+        setVillagers={setVillagers}
+        loading={loading}
+        setLoading={setLoading}
+      />
     </>
   );
 }
