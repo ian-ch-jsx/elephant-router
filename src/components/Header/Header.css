@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #121212;
+  color: #fefefe;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+.header h1 {
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header h1:hover {
+  color: #bb4430;
+}

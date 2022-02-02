@@ -1,0 +1,23 @@
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.pokemon-list span {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.pokemon-list img {
+  width: 300px;
+  height: 300px;
+}
+
+.pokemon-list img:hover {
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  transform: translateY(-10px);
+}
