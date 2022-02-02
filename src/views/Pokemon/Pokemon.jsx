@@ -25,7 +25,7 @@ export default function Pokemon() {
     return () => {
       clearInterval(timer);
     };
-  }, [_id]);
+  }, [_id, loading]);
 
   if (loading)
     return (
