@@ -4,11 +4,10 @@ import './VillagerDetail.css';
 export default function VillagerDetail({ villagerDetails }) {
   return (
     <div className="villager-details">
-      <img src={villagerDetails.image_uri} />
+      <img src={villagerDetails.image_uri} alt="profile" />
       <span>
         <h1>{villagerDetails.name['name-USen']}</h1>
         <p>{villagerDetails.species}</p>
-        <p>{/* <i>{villagerDetails.catch - phrase}</i> */}</p>
         <p>
           Birthday: {villagerDetails.birthday} | Personality: {villagerDetails.personality}
         </p>
