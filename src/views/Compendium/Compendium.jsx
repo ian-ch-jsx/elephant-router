@@ -11,7 +11,7 @@ export default function Compendium() {
     let timer;
     const fetchData = async () => {
       const data = await getVillagers();
-      console.log(data);
+      // console.log(data);
       setVillagers(data);
       timer = setTimeout(() => {
         setLoading(false);
@@ -23,7 +23,7 @@ export default function Compendium() {
     return () => {
       clearInterval(timer);
     };
-  }, [loading]);
+  }, []);
   if (loading)
     return (
       <div className="loading-div">

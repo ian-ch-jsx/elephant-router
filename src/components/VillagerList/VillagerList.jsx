@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './VillagerList.css';
 
 export default function VillagerList({ villagers }) {
+  console.log('VILLAGERS', typeof villagers, villagers);
   return (
     <div className="pokemon-list">
       {villagers.map((item) => (
