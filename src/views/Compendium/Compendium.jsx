@@ -14,7 +14,7 @@ export default function Compendium() {
       setPokemon(data.results);
       timer = setTimeout(() => {
         setLoading(false);
-      }, 500);
+      }, 400);
     };
     if (loading) {
       fetchData();
@@ -23,7 +23,12 @@ export default function Compendium() {
       clearInterval(timer);
     };
   }, [loading]);
-  if (loading) return <h2>loading...</h2>;
+  if (loading)
+    return (
+      <div className="loading-div">
+        <h1>loading...</h1>
+      </div>
+    );
   return (
     <>
       <PokemonList pokemon={pokemon} setPokemon={setPokemon} />

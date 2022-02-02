@@ -1,5 +1,7 @@
 export async function getPokemon() {
-  const resp = await fetch('https://pokedex-alchemy.herokuapp.com/api/pokedex?type=dark');
+  const resp = await fetch(
+    'https://pokedex-alchemy.herokuapp.com/api/pokedex?type=dark&perPage=50'
+  );
   const data = resp.json();
   return data;
 }

@@ -12,12 +12,12 @@
   margin: 20px;
 }
 
-.pokemon-list span:hover {
-  background-color: red;
-}
-
 .pokemon-list img {
   width: 300px;
   height: 300px;
-  object-fit: cover;
+}
+
+.pokemon-list img:hover {
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  transform: translateY(-10px);
 }
