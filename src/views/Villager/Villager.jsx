@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom/';
 import VillagerDetail from '../../components/VillagerDetail/VillagerDetail';
 import { getVillagerDetails } from '../../services/data';
-// import './Pokemon.css';
+import './Villager.css';
 
 export default function Villager() {
   const [villagerDetails, setVillagerDetails] = useState({});

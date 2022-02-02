@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders header', () => {
   render(<App />);
-  const linkElement = screen.getByText(/pokemon: dark side edition/i);
+  const linkElement = screen.getByText(/Animal crossing villagers/i);
   expect(linkElement).toBeInTheDocument();
 });

@@ -1,4 +1,4 @@
-.pokemon-details {
+.villager-details {
   display: flex;
   margin: auto;
   align-items: center;
@@ -7,10 +7,18 @@
   color: #fefefe;
 }
 
-.pokemon-details a {
+.villager-details span {
+  padding-left: 15px;
+}
+
+.villager-details a {
   color: #fefefe;
 }
 
-.pokemon-details a:hover {
+.villager-details a:hover {
   color: #bb4430;
+}
+
+.villager-details img {
+  border-radius: 100%;
 }
