@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom/';
-import PokemonDetail from '../../components/PokemonDetail/PokemonDetail';
-import { getPokemonDetails } from '../../services/data';
-import './Pokemon.css';
+import VillagerDetail from '../../components/VillagerDetail/VillagerDetail';
+import { getVillagerDetails } from '../../services/data';
+import './Villager.css';
 
-export default function Pokemon() {
-  const [pokemonDetails, setPokemonDetails] = useState({});
+export default function Villager() {
+  const [villagerDetails, setVillagerDetails] = useState({});
   const [loading, setLoading] = useState(true);
-  const { _id } = useParams();
+  const { id } = useParams();
   const history = useHistory();
 
   useEffect(() => {
     let timer;
     const fetchData = async () => {
-      const pokemonDetails = await getPokemonDetails(_id);
-      setPokemonDetails(pokemonDetails);
+      const villagerDetails = await getVillagerDetails(id);
+      setVillagerDetails(villagerDetails);
       timer = setTimeout(() => {
         setLoading(false);
       }, 400);
@@ -25,7 +25,7 @@ export default function Pokemon() {
     return () => {
       clearInterval(timer);
     };
-  }, [_id, loading]);
+  }, [id, loading]);
 
   if (loading)
     return (
@@ -40,7 +40,7 @@ export default function Pokemon() {
 
   return (
     <div className="detail-container">
-      <PokemonDetail pokemonDetails={pokemonDetails} setPokemonDetails={setPokemonDetails} />
+      <VillagerDetail villagerDetails={villagerDetails} setVillagerDetails={setVillagerDetails} />
       <button onClick={backButton}>Return home</button>
     </div>
   );

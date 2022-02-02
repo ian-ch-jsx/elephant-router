@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <div className="header">
       <Link to={'/'}>
-        <h1>Pokemon: Dark Side Edition</h1>
+        <h1>Animal Crossing Villagers</h1>
       </Link>
     </div>
   );
