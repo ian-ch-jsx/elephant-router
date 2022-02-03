@@ -8,7 +8,7 @@ export default function VillagerList({ villagers }) {
       {villagers.map((item) => (
         <span key={item.id}>
           <Link to={`./${item.id}`}>
-            <img src={item.icon_uri} />
+            <img src={item.icon_uri} alt="profile-icon" />
           </Link>
         </span>
       ))}
