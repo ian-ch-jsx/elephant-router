@@ -60,4 +60,7 @@ test('should render a list of villagers', () => {
       />
     </MemoryRouter>
   );
+
+  const profile = screen.getByRole('img', { name: /profile/i });
+  expect(profile).toBeInTheDocument();
 });
