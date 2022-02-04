@@ -23,6 +23,7 @@ export default function Villager() {
     return (
       <div className="loading-div">
         <h1>loading...</h1>
+        <button onClick={backButton}>Return home</button>
       </div>
     );
 
