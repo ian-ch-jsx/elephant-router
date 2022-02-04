@@ -9,10 +9,10 @@
   margin: 20px;
   width: 150px;
   border: 0;
-  background-color: #121212;
+  background-color: #7fb285;
   color: #fefefe;
   padding: 10px;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -20,5 +20,5 @@
 
 .detail-container button:hover {
   cursor: pointer;
-  background-color: #bb4430;
+  background-color: #a6c9aa;
 }
