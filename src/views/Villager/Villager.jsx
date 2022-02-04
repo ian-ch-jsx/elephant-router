@@ -11,26 +11,19 @@ export default function Villager() {
   const history = useHistory();
 
   useEffect(() => {
-    let timer;
     const fetchData = async () => {
       const villagerDetails = await getVillagerDetails(id);
       setVillagerDetails(villagerDetails);
-      timer = setTimeout(() => {
-        setLoading(false);
-      }, 400);
+      setLoading(false);
     };
-    if (loading) {
-      fetchData();
-    }
-    return () => {
-      clearInterval(timer);
-    };
-  }, [id, loading]);
+    fetchData();
+  }, [id]);
 
   if (loading)
     return (
       <div className="loading-div">
         <h1>loading...</h1>
+        <button onClick={backButton}>Return home</button>
       </div>
     );
 

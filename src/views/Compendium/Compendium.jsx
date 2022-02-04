@@ -8,21 +8,13 @@ export default function Compendium() {
   const [villagers, setVillagers] = useState([]);
 
   useEffect(() => {
-    let timer;
     const fetchData = async () => {
       const data = await getVillagers();
       setVillagers(data);
-      timer = setTimeout(() => {
-        setLoading(false);
-      }, 400);
+      setLoading(false);
     };
-    if (loading) {
-      fetchData();
-    }
-    return () => {
-      clearInterval(timer);
-    };
-  }, [loading]);
+    fetchData();
+  }, []);
   if (loading)
     return (
       <div className="loading-div">

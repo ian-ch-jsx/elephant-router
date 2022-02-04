@@ -1,18 +1,29 @@
 .villager-details {
   display: flex;
-  margin: auto;
+  margin: 50px auto;
   align-items: center;
   justify-content: center;
-  padding-top: 120px;
+  padding: 20px;
   color: #fefefe;
+  background-color: #7fb285;
+  filter: drop-shadow(0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5));
 }
 
 .villager-details span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-left: 15px;
 }
 
 .villager-details a {
   color: #fefefe;
+}
+
+.villager-details p {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .villager-details a:hover {

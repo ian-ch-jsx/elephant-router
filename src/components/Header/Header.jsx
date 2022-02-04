@@ -5,9 +5,11 @@ import './Header.css';
 export default function Header() {
   return (
     <div className="header">
-      <Link to={'/'}>
-        <h1>Animal Crossing Villagers</h1>
-      </Link>
+      <h1>
+        <Link to={'/'} data-testid="header">
+          Animal Crossing Villagers
+        </Link>
+      </h1>
     </div>
   );
 }
