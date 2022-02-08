@@ -1,29 +1,24 @@
 import { useEffect, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom/';
+import { useHistory } from 'react-router-dom/';
 import VillagerDetail from '../../components/VillagerDetail/VillagerDetail';
-import { getVillagerDetails } from '../../services/data';
+import useVillagerDetails from '../../context/useVillagers';
 import './Villager.css';
 
 export default function Villager() {
-  const [villagerDetails, setVillagerDetails] = useState({});
   const [loading, setLoading] = useState(true);
-  const { id } = useParams();
   const history = useHistory();
+  const { villagerDetails } = useVillagerDetails();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const villagerDetails = await getVillagerDetails(id);
-      setVillagerDetails(villagerDetails);
+    if (villagerDetails.name) {
       setLoading(false);
-    };
-    fetchData();
-  }, [id]);
+    }
+  }, [villagerDetails]);
 
   if (loading)
     return (
       <div className="loading-div">
         <h1>loading...</h1>
-        <button onClick={backButton}>Return home</button>
       </div>
     );
 
@@ -33,7 +28,7 @@ export default function Villager() {
 
   return (
     <div className="detail-container">
-      <VillagerDetail villagerDetails={villagerDetails} setVillagerDetails={setVillagerDetails} />
+      <VillagerDetail villagerDetails={villagerDetails} />
       <button onClick={backButton}>Return home</button>
     </div>
   );

@@ -8,7 +8,7 @@ export default function VillagerDetail({ villagerDetails }) {
       <span>
         <h1>{villagerDetails.name['name-USen']}</h1>
         <p>{villagerDetails.species}</p>
-        <p>Birthday: {villagerDetails.birthday}</p>{' '}
+        <p>Birthday: {villagerDetails.birthday}</p>
         <p> Personality: {villagerDetails.personality}</p>
       </span>
     </div>

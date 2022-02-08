@@ -15,8 +15,10 @@
 
 .header a {
   text-decoration: none;
+  color: #fefefe;
 }
 
-/* .header h1:hover {
-  color: #bb4430;
-} */
+.header a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
